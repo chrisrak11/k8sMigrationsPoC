@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp", "WebApp\WebApp.csproj", "{765A36FC-B4DC-44D0-BDEA-8D4F30B6CF83}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionFiles", "SolutionFiles", "{D3AC1FC7-E907-4130-A936-4C6476CE2BB5}"
+	ProjectSection(SolutionItems) = preProject
+		aspnetcore_sample.yaml = aspnetcore_sample.yaml
+		job.yaml = job.yaml
+		permissions.yaml = permissions.yaml
+		README.md = README.md
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{765A36FC-B4DC-44D0-BDEA-8D4F30B6CF83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{765A36FC-B4DC-44D0-BDEA-8D4F30B6CF83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{765A36FC-B4DC-44D0-BDEA-8D4F30B6CF83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{765A36FC-B4DC-44D0-BDEA-8D4F30B6CF83}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

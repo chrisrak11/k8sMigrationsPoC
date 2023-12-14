@@ -1,0 +1,35 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: dummytoggle-job
+spec:
+  backoffLimit: 0
+  template:
+    metadata:
+      name: dummytoggle-pod
+      labels:
+        job-name: dummytoggle-job  # Selector for the service
+    spec:
+      containers:
+        - name: dummytoggle-container
+          image: chrisrak11/dummytogglerepo:latest
+          ports:
+            - containerPort: 80
+          env:
+            - name: APPLY_MIGRATIONS
+              value: "true"
+      restartPolicy: Never  # Ensure the pod doesn't restart
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: dummytoggle-service
+spec:
+  selector:
+    job-name: dummytoggle-job
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+      nodePort: 30080    # Specify a static port for NodePort
+  type: NodePort        # Change the service type to NodePort
